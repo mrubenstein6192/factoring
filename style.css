@@ -19,6 +19,10 @@ body, html {
 
 }
 
+input { 
+  text-align: center; 
+}
+
 #problem{
 background-color: aliceblue;
 height: 100%;

@@ -2,6 +2,9 @@ $(document).ready(function() {
 window.scrollTo(0,0);
 //only for now until the app is more complete
 $("#welcome").hide();
+$("#prompt").hide();
+$("#guesses").hide();
+$("#output").hide();
 
 var a1Array = [
 "x<sup>2</sup> + 5x + 6", 
@@ -37,11 +40,47 @@ var ranInd = Math.floor(Math.random()* 9) + 1;
 $("#a1").on("click", function() {
   console.log(randomIndex)
   $("#question").html(a1Array[randomIndex]);
+  $("#prompt").show();
+  $("#guesses").show();
+  $("#first").focus();
+  $("#output").show();
+
+  $("#enterAnswer").on("click", function(event) {
+    event.preventDefault();
+    var firstOperation = $("#first").val();
+    var emptyArr = [];
+    emptyArr.push(firstOperation)
+    var one = "1";
+    emptyArr.push(one);
+    var newArrayString = emptyArr.toString().replace(",", "");
+    var newArrayInt = parseInt(newArrayString, 10);
+
+    var firstNumber = $("#second").val();
+    console.log(newArrayInt*firstNumber)
+
+    var secondOperation = $("#third").val();
+    var emptyArrTwo = [];
+    emptyArrTwo.push(secondOperation);
+    var oneTwo = "1";
+    emptyArrTwo.push(oneTwo);
+    var newArrayStringTwo = emptyArrTwo.toString().replace(",", "");
+    var newArrayIntTwo = parseInt(newArrayStringTwo, 10);
+    
+    var secondNumber = $("#fourth").val();
+    console.log(newArrayIntTwo*secondNumber);
+    
+    // var numberOne = firstOperation * firstNumber;
+    // console.log(numberOne);
+    // var numberTwo = secondOperation * secondNumber;
+    // console.log(numberTwo)
+  })
 })
 
 $("#aNot1").on("click", function() {
   console.log(ranInd);
  $("#question").html(secondArray[ranInd]);
+ $("#prompt").html("override");
+ $("#guesses").html("override");
 })
 
 })
