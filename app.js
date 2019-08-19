@@ -56,7 +56,7 @@ $("#a1").on("click", function() {
     var newArrayInt = parseInt(newArrayString, 10);
 
     var firstNumber = $("#second").val();
-    console.log(newArrayInt*firstNumber)
+    var firstChoice = (newArrayInt*firstNumber)
 
     var secondOperation = $("#third").val();
     var emptyArrTwo = [];
@@ -67,12 +67,42 @@ $("#a1").on("click", function() {
     var newArrayIntTwo = parseInt(newArrayStringTwo, 10);
     
     var secondNumber = $("#fourth").val();
-    console.log(newArrayIntTwo*secondNumber);
+    var secondChoice = (newArrayIntTwo*secondNumber);
     
-    // var numberOne = firstOperation * firstNumber;
-    // console.log(numberOne);
-    // var numberTwo = secondOperation * secondNumber;
-    // console.log(numberTwo)
+    if (firstChoice < 0) {
+      var firstChoiceString = "(" + firstChoice + ")"
+    }
+    else {
+      firstChoiceString = firstChoice
+    }
+    if (secondChoice < 0) {
+      var secondChoiceString = "(" + secondChoice + ")"
+    }
+    else {
+      secondChoiceString = secondChoice
+    }
+
+    $("#chose").html("You chose: " + firstChoice + " and " + secondChoice);
+    var multiplied = firstChoice * secondChoice
+    $("#multiplied").html(firstChoiceString + " x " + secondChoiceString + " = " + multiplied);
+    var sum = firstChoice + secondChoice;
+    $("#sum").html(firstChoiceString + " + " + secondChoiceString + " = " + sum);
+
+    if (sum > 0) {
+      sumTwo = "+ " + sum
+    }
+    else {
+      sumTwo = sum
+    }
+
+    if (multiplied > 0) {
+      product = "+ " + multiplied
+    }
+    else {
+      product = multiplied
+    }
+
+    $("#answer").html("Your answer would result in the following quadratic expression: x<sup>2</sup> " + sumTwo + "x " + product);
   })
 })
 
