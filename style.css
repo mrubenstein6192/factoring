@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Tera');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+
+body, html { 
+  /* The image used */
+  background-image: url("./images/space.jpg");
+
+  /* Full height */
+  height: 750px; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  /* background-color: lightblue;
+  background-blend-mode: multiply; */
+  
+}
