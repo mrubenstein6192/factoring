@@ -38,6 +38,7 @@ var ranInd = Math.floor(Math.random()* 9) + 1;
 
 // on-clicks for which to appear
 $("#a1").on("click", function() {
+  $("#buttonChoices").hide();
   console.log(randomIndex)
   $("#question").html(a1Array[randomIndex]);
   $("#prompt").show();
@@ -82,7 +83,7 @@ $("#a1").on("click", function() {
       secondChoiceString = secondChoice
     }
 
-    $("#chose").html("You chose: " + firstChoice + " and " + secondChoice);
+    $("#chose").html(firstChoice + " and " + secondChoice);
     var multiplied = firstChoice * secondChoice
     $("#multiplied").html(firstChoiceString + " x " + secondChoiceString + " = " + multiplied);
     var sum = firstChoice + secondChoice;

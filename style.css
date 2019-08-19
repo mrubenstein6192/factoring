@@ -23,6 +23,10 @@ input {
   text-align: center; 
 }
 
+mark{
+  background-color: yellow;
+}
+
 #problem{
 background-color: aliceblue;
 height: 100%;

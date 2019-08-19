@@ -28,31 +28,33 @@
     </div>
 
     <div class='container' id='problem'>
-      <div class='row text-center justify-content-center my-3' id="buttonChoices">Practice factoring problems where a =
-        1 or challenge yourself where a > 1. Choose below! <br>
-        <div class="col-12">
-          <button id='a1'>
-            a = 1
-          </button>
-          <button id='aNot1'>
-            a > 1
-          </button>
-        </div>
-      </div>
-
-      <!-- row for random expression -->
-      <div class="row">
-        <div class="col-12 text-center" id='question'>
-
-        </div>
-      </div>
+     
       <!-- row for prompt -->
       <div class="row">
         <div class="col-12 text-center" id="prompt">
-          Standard form for a quadratic expression is ax<sup>2</sup> + bx + c <br>Your goal is to find two numbers that
-          multiply to "c" and sum up to "b".<br>You will also have to decide between " + " and " - " for each number.
+          Standard form for a quadratic expression is <br><strong>ax<sup>2</sup> + bx + c </strong><br>Your goal is to find two numbers that <mark>multiply</mark> to "c" and <mark>add up</mark> to "b".<br>You will also have to decide between " + " and " - " for each number.
         </div>
       </div>
+
+      <div class='row text-center justify-content-center my-3' id="buttonChoices">Practice factoring problems where a =
+          1 or challenge yourself where a > 1. Choose below! <br>
+          <div class="col-12">
+            <button id='a1'>
+              a = 1
+            </button>
+            <button id='aNot1'>
+              a > 1
+            </button>
+          </div>
+        </div>
+  
+        <!-- row for random expression -->
+        <div class="row">
+          <div class="col-4 text-center" id='question'>
+  
+          </div>
+          <div class = "col-8"></div>
+        </div>
 
       <!-- row for input boxes -->
       <div class="row my-3 text-center">
@@ -73,9 +75,17 @@
           <div class = "row">
             <div class = "col-12" id = "output">
               <div class = "row">
-                <div class="col-4" id = "chose">You Chose: </div>
-                <div class="col-4" id = "multiplied">times</div>
-                <div class="col-4" id = "sum">plus</div>
+                <div class="col-4">
+                  <u>You Chose: </u><br>
+                  <div id = "chose"></div>
+                </div>
+                <div class="col-4">
+                  <u>Multiplied to c</u><br>
+                 <div id = "multiplied"></div>
+                 </div>
+                <div class="col-4">
+                  <u>Added to b:</u><br>
+                  <div id = "sum"></div>
               </div>
             </div>
           </div>
