@@ -16,5 +16,11 @@ body, html {
   background-size: cover;
   /* background-color: lightblue;
   background-blend-mode: multiply; */
-  
+
+}
+
+#problem{
+background-color: aliceblue;
+height: 100%;
+padding: 10px;
 }
