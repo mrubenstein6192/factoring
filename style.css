@@ -19,6 +19,37 @@ body, html {
 
 }
 
+#buttonChoices {
+  font-family: "Libre Franklin";
+  font-size: 18px;
+}
+
+#a1, #aNot1 {
+  background-color: lightblue;
+  padding: 1px 3px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: maroon;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+  margin-left: 7px;
+}
+
+#a1:hover, #aNot1:hover {
+  background-color: maroon;
+  color: lightblue;
+}
+
+#a1:active, #aNot1:active{
+  background-color: maroon;
+  color: skyblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
 
 .start {
   border-radius: 10px;
@@ -98,7 +129,7 @@ h1 {
   border-radius: 25px;
   border-color: black;
   box-shadow: 3px 3px gray;
-  background: url("./images/paper-bg.jpg");
+  background-color: rgb(197, 255, 236);
   background-position: left top;
   background-repeat: repeat;
   padding: 20px; 
