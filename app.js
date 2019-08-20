@@ -54,6 +54,13 @@ $("#a1").on("click", function() {
   $("#guesses").show();
   $("#first").focus();
   $("#output").show();
+  $(document).ready(function(){
+    $('input').keyup(function(){
+        if(this.value.length==$(this).attr("maxlength")){
+            $(this).next().focus();
+        }
+    });
+});
 
   $("#enterAnswer").on("click", function(event) {
     event.preventDefault();
@@ -94,16 +101,32 @@ $("#a1").on("click", function() {
 
     $("#chose").html(firstChoice + " and " + secondChoice);
     var multiplied = firstChoice * secondChoice
-    $("#multiplied").html(firstChoiceString + " x " + secondChoiceString + " = " + multiplied);
+    $("#multiplied").html("c = " + firstChoiceString + " x " + secondChoiceString + " = " + multiplied);
     var sum = firstChoice + secondChoice;
-    $("#sum").html(firstChoiceString + " + " + secondChoiceString + " = " + sum);
+    $("#sum").html("b = " + firstChoiceString + " + " + secondChoiceString + " = " + sum);
 
     if (sum > 0) {
+      if (sum == 1) {
+        sumTwo = " "
+      }
+      else {
       sumTwo = "+ " + sum
+      }
     }
-    else {
+    else if (sum < 0){
+      if (sum == -1) {
+        sumTwo = " - "
+      }
+      else {
       sumTwo = sum
     }
+  }
+  else {
+    sumTwo = 0;
+  }
+
+  
+  console.log(sumTwo);
 
     if (multiplied > 0) {
       product = "+ " + multiplied
@@ -112,7 +135,13 @@ $("#a1").on("click", function() {
       product = multiplied
     }
 
+    if (sumTwo == 0) {
+      $("#answer").html("Your answer would result in the following quadratic expression: x<sup>2</sup> " + product)
+    }
+    else {
+
     $("#answer").html("Your answer would result in the following quadratic expression: x<sup>2</sup> " + sumTwo + "x " + product);
+    }
   })
 })
 
