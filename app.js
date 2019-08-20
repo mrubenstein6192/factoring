@@ -6,6 +6,7 @@ $("#prompt").hide();
 $("#problem").hide();
 $("#guesses").hide();
 $("#output").hide();
+$("#finalCheck").hide();
 
 $(document).on("click", ".start", function() {
   start();
@@ -142,6 +143,25 @@ $("#a1").on("click", function() {
 
     $("#answer").html("Your answer would result in the following quadratic expression: x<sup>2</sup> " + sumTwo + "x " + product);
     }
+
+    $("#finalCheck").show();
+    var firstChoicePos = Math.abs(firstChoice)
+    var secondChoicePos = Math.abs(secondChoice)
+    if (firstChoice > 0) {
+      var firstChoiceFinal = " + " + firstChoicePos;
+    }
+    else {
+      firstChoiceFinal = " - " + firstChoicePos;
+    }
+
+    if (secondChoice > 0) {
+      var secondChoiceFinal = " + " + secondChoicePos
+    }
+    else {
+      var secondChoiceFinal = " - " + secondChoicePos;
+    }
+
+    $("#finalCheck").html("So, does your answer of (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") give you back exactly " + a1Array[randomIndex] + "?"); 
   })
 })
 

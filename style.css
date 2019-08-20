@@ -25,7 +25,7 @@ body, html {
   font-size: 18px;
 }
 
-#a1, #aNot1 {
+#a1, #aNot1, #enterAnswer {
   background-color: lightblue;
   padding: 1px 3px;
   font-size: 18px;
@@ -40,12 +40,12 @@ body, html {
   margin-left: 7px;
 }
 
-#a1:hover, #aNot1:hover {
+#a1:hover, #aNot1:hover, #enterAnswer:hover {
   background-color: maroon;
   color: lightblue;
 }
 
-#a1:active, #aNot1:active{
+#a1:active, #aNot1:active, #enterAnswer:active{
   background-color: maroon;
   color: skyblue;
   box-shadow: 5px 5px #666;
