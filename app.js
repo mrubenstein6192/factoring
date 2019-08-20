@@ -1,11 +1,20 @@
 $(document).ready(function() {
 window.scrollTo(0,0);
 //only for now until the app is more complete
-$("#welcome").hide();
+// $("#welcome").hide();
 $("#prompt").hide();
+$("#problem").hide();
 $("#guesses").hide();
 $("#output").hide();
 
+$(document).on("click", ".start", function() {
+  start();
+  $("#first").focus();
+})
+
+function start() {
+  $("#welcome").hide();
+  $("#problem").show();
 var a1Array = [
 "x<sup>2</sup> + 5x + 6", 
 "x<sup>2</sup> + 4x + 4", 
@@ -114,4 +123,5 @@ $("#aNot1").on("click", function() {
  $("#guesses").html("override");
 })
 
+}
 })
