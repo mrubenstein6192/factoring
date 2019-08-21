@@ -117,7 +117,7 @@ $("#a1").on("click", function() {
     //handle html for b
     if (sum > 0) {
       if (sum == 1) {
-        sumTwo = " "
+        sumTwo = "+ "
       }
       else {
       sumTwo = "+ " + sum
@@ -131,7 +131,7 @@ $("#a1").on("click", function() {
       sumTwo = " - " + Math.abs(sum)
     }
   }
-  else {
+  else if (sumTwo = 0){
     sumTwo = 0;
   }
 
@@ -191,15 +191,6 @@ $("#aNot1").on("click", function() {
  $("#guessesTwo").show();
   $("#firstAns").focus();
  
-// just the focus function
-  // $(document).ready(function(){
-  //   $('input').keyup(function(){
-  //       if(this.value.length==$(this).attr("maxlength")){
-  //           $(this).next().focus();
-  //       }
-  //   });
-  //   });
-
 
     $("#enterAnswerTwo").on("click", function(event) {
       event.preventDefault();
@@ -312,6 +303,22 @@ $("#aNot1").on("click", function() {
 
        $("#answer").html("Your answer of <mark>(" + firNumFinal + "x " + secondChoiceFinal + ")(" + thirdNumFinal + "x " + fourthNumFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>"+multToA+"x<sup>2</sup> " + sumToBFinal + "x " + multToCFinal + "</mark>. <br>Is that what you started with?")
        $("#question").html("<mark>" + secondArray[ranInd] + "</mark>")
+
+       $("#clickMeTwo").on("click", function() {
+        location.reload();
+        start();
+      })
+      $("#notReady").on("click", function() {
+        $("#firstAns").val("");
+        $("#secondAns").val("");
+        $("#thirdAns").val("");
+        $("#fourthAns").val("");
+        $("#fifthAns").val("");
+        $("#sixthAns").val("");
+        $("#firstAns").focus();
+      })
+
+
     })
 
 //end of aNot1 section
