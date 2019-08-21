@@ -14,8 +14,8 @@ $(document).on("click", ".start", function() {
 })
 
 function start() {
-  $("#welcome").hide();
-  $("#problem").show();
+$("#welcome").hide();
+$("#problem").show();
 var a1Array = [
 "x<sup>2</sup> + 5x + 6", 
 "x<sup>2</sup> + 4x + 4", 
@@ -68,7 +68,7 @@ $("#a1").on("click", function() {
   $("#enterAnswer").on("click", function(event) {
     event.preventDefault();
     $("#output").show();
-    
+    $("#finalCheck").show()
     
     var firstOperation = $("#first").val();
     
@@ -169,11 +169,18 @@ $("#a1").on("click", function() {
     $("#answer").html("Your answer of  <mark>(x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>.  <br>Is that what you started with?");
     }
 
-    // $("#finalCheck").show();
-    
+    $("#clickMeTwo").on("click", function() {
+      location.reload();
+      start();
+    })
 
-
-    // $("#finalCheck").html("So, does your answer of (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") give you back exactly the expression you started with: <mark>" + a1Array[randomIndex] + "</mark>?"); 
+    $("#notReady").on("click", function() {
+      $("#first").val("");
+      $("#second").val("");
+      $("#third").val("");
+      $("#fourth").val("");
+      $("#first").focus();
+    })
   })
 })
 
