@@ -266,6 +266,9 @@ padding: 10px;
   #widthControl{
     width: 350px;
   }
+  .zooming {
+    font-size: 10px;
+  }
 
   #choseTwo, #multToA, #multipliedTwo, #sumTwo {
     font-size: 10px;
