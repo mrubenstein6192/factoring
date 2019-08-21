@@ -30,8 +30,8 @@
      
       <!-- row for prompt -->
       <div class="row">
-        <div class="col-12 text-center" id="prompt">
-          Standard form for a quadratic expression is <br><strong>ax<sup>2</sup> + bx + c </strong><br>Your goal is to find two numbers that <mark>multiply</mark> to "c" and <mark>add up</mark> to "b".<br>You will also have to decide between " + " and " - " for each number.
+        <div class="col-8 text-center mx-auto" id="prompt">
+          Standard form for a quadratic expression is <br><strong>ax<sup>2</sup> + bx + c </strong><br>Your goal is to find two numbers that <mark>multiply to "c"</mark> and <mark>add up to "b".</mark><br>You will also have to decide between " + " and " - " for each number.
         </div>
       </div>
 
@@ -49,17 +49,17 @@
   
         <!-- row for random expression -->
         <div class="row mt-2">
-          <div class="col-sm-12 col-lg-4 text-center" id='question'>
+          <div class="col-12 text-center" id='question'>
   
           </div>
-          <div class = "col-8"></div>
+          <!-- <div class = "col-8"></div> -->
         </div>
 
       <!-- row for input boxes -->
       <div class="row my-3 text-center">
-        <div class="col-sm-12 col-lg-4 mb-2">
+        <div class="col-12 mb-2">
           <div class="row">
-            <div class="col-12" id="guesses">
+            <div class="col-12 text-center mx-auto" id="guesses">
               <form autocomplete="off" id='guess-form'>
                 (x <input id="first" maxlength="1" size='1' type='text'></input> <input id="second" maxlength="1" size='1' type='numerical'></input>)
                 (x <input id="third" maxlength="1" size='1' type='text'></input> <input id="fourth" maxlength="1" size='1' type='numerical'></input>)
@@ -70,8 +70,8 @@
           </div>
         </div>
 
-        <div class = "col-sm-12 col-lg-8">
-          <div class = "row">
+        <div class = "col-12">
+          <div class = "row my-3">
             <div class = "col-12" id = "output">
               <div class = "row">
                 <div class="col-4">
@@ -88,14 +88,15 @@
               </div>
             </div>
           </div>
+          
           <div class = "row">
-            <div class = "col-12">
-          <div class = "row mt-3">
-            <div class = "col-12 text-center" id = "answer"></div>
-          </div>
-          <div class = "row mt-3">
-          <div class = "col-12" id = "finalCheck"></div>
+            <div class = "col-12 text-center mx-auto">
+            <div class = "row mt-3">
+            <div class = "col-12 text-center mx-auto" id = "answer"></div>
             </div>
+          <div class = "row mt-3">
+          <div class = "col-12 text-center mx-auto" id = "finalCheck"></div>
+          </div>
           </div>
 
          

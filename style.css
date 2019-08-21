@@ -92,6 +92,16 @@ body, html {
   right: 0;
 }
 
+#prompt {
+  border-radius: 25px;
+  background-color: white;
+  font-family: "Josefin Sans";
+  border-style: double;
+  padding: 10px;
+  font-size: large;
+  color:black;
+
+}
 
 #welcome{
   background-image: url('./images/symbols.jpg');

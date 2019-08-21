@@ -54,7 +54,7 @@ $("#a1").on("click", function() {
   $("#prompt").show();
   $("#guesses").show();
   $("#first").focus();
-  $("#output").show();
+  
   $(document).ready(function(){
     $('input').keyup(function(){
         if(this.value.length==$(this).attr("maxlength")){
@@ -65,6 +65,7 @@ $("#a1").on("click", function() {
 
   $("#enterAnswer").on("click", function(event) {
     event.preventDefault();
+    $("#output").show();
     var firstOperation = $("#first").val();
     var emptyArr = [];
     emptyArr.push(firstOperation)
