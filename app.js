@@ -141,7 +141,7 @@ $("#a1").on("click", function() {
       product = "+ " + multiplied
     }
     else {
-      product = multiplied
+      product = "- " + Math.abs(multiplied)
     }
 
     var firstChoicePos = Math.abs(firstChoice)
