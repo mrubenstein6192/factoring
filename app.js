@@ -161,12 +161,15 @@ $("#a1").on("click", function() {
     }
 
     if (sumTwo == 0) {
-      $("#answer").html("Your answer of <mark>(x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + " - " + Math.abs(product) + "</mark>. <br>Is that what you started with?");
+      $("#answer").html("Your answer of <mark>(x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + " - " + Math.abs(multiplied) + "</mark>. <br>Is that what you started with?");
+      $("#question").html("<mark>" + a1Array[randomIndex] + "</mark>")
       
     }
     else {
 
     $("#answer").html("Your answer of  <mark>(x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>.  <br>Is that what you started with?");
+
+    $("#question").html("<mark>" + a1Array[randomIndex] + "</mark>")
     }
 
     $("#clickMeTwo").on("click", function() {
