@@ -37,6 +37,16 @@
           decide between " + " and " - " for each number.
         </div>
       </div>
+      <div class="row">
+          <div class="col-8 text-center mx-auto" id="promptTwo">
+            Standard form for a quadratic expression is <br><strong>ax<sup>2</sup> + bx + c </strong><br>Since a > 1, factoring is a little tougher, but you can do it! Practice makes perfect! 
+            <ul>
+              <li>First, think of two numbers to be placed in front of each "x" in each set of parentheses that <mark>multiply to "a."</mark></li>
+              <li>Second, think of two numbers to be placed at the end of each set of parentheses that <mark>multiply to "c."</mark></li>
+              <li>The last part is the toughest, but you'll get the hang of it with repetition: Think of the four numbers you chose as First, Second, Third, Fourth reading from left to right.  You need (First)*(Fourth) + (Second)*(Third) to <mark>add up to "b."</mark></li>
+              <br>If that doesn't make sense now, hopefully it will when you try a problem. <br>You will also have to decide between " + " and " - " for each number.</ul>
+          </div>
+        </div>
 
       <div class='row text-center justify-content-center my-3' id="buttonChoices">Practice factoring problems where a =
         1 or challenge yourself where a > 1. Choose below! <br>
@@ -73,6 +83,18 @@
               </form>
             </div>
           </div>
+          <div class="row">
+              <div class="col-12 text-center mx-auto" id="guessesTwo">
+                <form autocomplete="off" id='guess-form'>
+                    (<input id="firstAns" maxlength="1" size='1' type='text'></input>x <input id="secondAns" maxlength="1" size='1' type='text'></input> <input id="thirdAns" maxlength="1"
+                    size='1' type='numerical'></input>)
+                    (<input id="fourthAns" maxlength="1" size='1' type='text'></input>x <input id="fifthAns" maxlength="1" size='1' type='text'></input> <input id="sixthAns" maxlength="1"
+                    size='1' type='numerical'></input>)
+                  <br>
+                  <button id="enterAnswerTwo" type="submit" class="mt-2 submit">Check</button>
+                </form>
+              </div>
+            </div>
         </div>
 
         <div class="col-12">
@@ -93,6 +115,27 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-12" id="outputTwo">
+                <div class="row">
+                  <div class="col-3">
+                    <u>You Chose: </u><br>
+                    <div id="choseTwo"></div>
+                  </div>
+                  <div class="col-3">
+                      <u>Multiplied to a: </u><br>
+                      <div id="multToA"></div>
+                    </div>
+                  <div class="col-3">
+                    <u>Multiplied to c:</u><br>
+                    <div id="multipliedTwo"></div>
+                  </div>
+                  <div class="col-3">
+                    <u>Added to b:</u><br>
+                    <div id="sumTwo"></div>
+                  </div>
+                </div>
+              </div>
 
             <div class="row mt-4 mx-auto">
               <div class="col-12" id="answer">

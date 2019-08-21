@@ -25,7 +25,7 @@ body, html {
   font-size: 18px;
 }
 
-#a1, #aNot1, #enterAnswer {
+#a1, #aNot1, #enterAnswer, #enterAnswerTwo {
   background-color: lightblue;
   padding: 1px 3px;
   font-size: 18px;
@@ -40,12 +40,12 @@ body, html {
   margin-left: 7px;
 }
 
-#a1:hover, #aNot1:hover, #enterAnswer:hover {
+#a1:hover, #aNot1:hover, #enterAnswer:hover, #enterAnswerTwo:hover {
   background-color: maroon;
   color: lightblue;
 }
 
-#a1:active, #aNot1:active, #enterAnswer:active{
+#a1:active, #aNot1:active, #enterAnswer:active, #enterAnswerTwo:active{
   background-color: maroon;
   color: skyblue;
   box-shadow: 5px 5px #666;
@@ -100,7 +100,16 @@ body, html {
   padding: 10px;
   font-size: large;
   color:black;
+}
 
+#promptTwo {
+  border-radius: 25px;
+  background-color: white;
+  font-family: "Josefin Sans";
+  border-style: double;
+  padding: 10px;
+  font-size: large;
+  color:black;
 }
 
 #welcome{
