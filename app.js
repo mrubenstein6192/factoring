@@ -170,6 +170,7 @@ $("#a1").on("click", function() {
     }
     //correct button
     $("#clickMeTwo").on("click", function() {
+      window.scrollTo(0, 0);
       location.reload();
       start();
     })
@@ -305,6 +306,7 @@ $("#aNot1").on("click", function() {
        $("#question").html("<mark>" + secondArray[ranInd] + "</mark>")
 
        $("#clickMeTwo").on("click", function() {
+        window.scrollTo(0, 0);
         location.reload();
         start();
       })
