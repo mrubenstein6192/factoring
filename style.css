@@ -175,6 +175,12 @@ padding: 10px;
   }
 
   #answer{
+    font-size: 13px;
+  }
+
+  #prompt{
+    width:100%;
     font-size: 15px;
+    
   }
 }
