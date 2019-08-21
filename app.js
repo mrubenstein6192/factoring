@@ -273,7 +273,7 @@ $("#aNot1").on("click", function() {
        else {
          secxthirdStr = secxthird;
        }
-       $("#sumTwo").html("b = (First)*(Fourth) + (Second)(Third)<br>(" + firNum + " x " + fourthChoiceString + ") + (" + secChoiceString + " x " + thirdNum + ") = <br>" + firstxfourthStr + " + " + secxthirdStr + " = " + sumToB);
+       $("#sumTwo").html("b = (First)(Fourth) + (Second)(Third)<br>(" + firNum + " x " + fourthChoiceString + ") + (" + secChoiceString + " x " + thirdNum + ") = <br>" + firstxfourthStr + " + " + secxthirdStr + " = " + sumToB);
 
        if (firNum == 1) {
          var firNumFinal = ""
