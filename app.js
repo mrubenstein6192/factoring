@@ -31,9 +31,14 @@ var a1Array = [
 "x<sup>2</sup> - 11x + 24", 
 "x<sup>2</sup> + 3x - 18", 
 "x<sup>2</sup> - x - 20", 
-"x<sup>2</sup> - 6x - 7"
+"x<sup>2</sup> - 6x - 7",
+"x<sup>2</sup> - 25",
+"x<sup>2</sup> - 7x + 12",
+"x<sup>2</sup> + 2x - 3",
+"x<sup>2</sup> - 15x - 34",
+"x<sup>2</sup> + x - 30"
 ];
-var randomIndex = Math.floor(Math.random() * 11) + 1;
+var randomIndex = Math.floor(Math.random() * 16) + 1;
 
 var secondArray = [
 "2x<sup>2</sup> - 3x - 2",
@@ -46,8 +51,11 @@ var secondArray = [
 "3x<sup>2</sup> + 13x + 4",
 "4x<sup>2</sup> + 11x + 6",
 "2x<sup>2</sup> - 9x + 4",
+"6x<sup>2</sup> - 2x - 12",
+"6x<sup>2</sup> - x - 5",
+"7x<sup>2</sup> - 5x - 2"
 ];
-var ranInd = Math.floor(Math.random()* 9) + 1;
+var ranInd = Math.floor(Math.random()* 12) + 1;
 
 // on-clicks for which to appear
 $("#a1").on("click", function() {
