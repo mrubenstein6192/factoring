@@ -100,6 +100,8 @@ $("#a1").on("click", function() {
       secondChoiceString = secondChoice
     }
 
+    
+
     $("#chose").html(firstChoice + " and " + secondChoice);
     var multiplied = firstChoice * secondChoice
     $("#multiplied").html("c = " + firstChoiceString + " x " + secondChoiceString + " = " + multiplied);
@@ -141,7 +143,7 @@ $("#a1").on("click", function() {
     }
     else {
 
-    $("#answer").html("Your answer would result in the following quadratic expression: x<sup>2</sup> " + sumTwo + "x " + product);
+    $("#answer").html("Your answer would result in the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>");
     }
 
     $("#finalCheck").show();
@@ -161,7 +163,8 @@ $("#a1").on("click", function() {
       var secondChoiceFinal = " - " + secondChoicePos;
     }
 
-    $("#finalCheck").html("So, does your answer of (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") give you back exactly " + a1Array[randomIndex] + "?"); 
+
+    $("#finalCheck").html("So, does your answer of (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") give you back exactly the expression you started with: <mark>" + a1Array[randomIndex] + "</mark>?"); 
   })
 })
 
