@@ -58,6 +58,8 @@ $("#a1").on("click", function() {
   $(document).ready(function(){
     $('input').keyup(function(){
         if(this.value.length==$(this).attr("maxlength")){
+            
+          // $('input').css("visibility", "hidden" )
             $(this).next().focus();
         }
     });
@@ -66,7 +68,10 @@ $("#a1").on("click", function() {
   $("#enterAnswer").on("click", function(event) {
     event.preventDefault();
     $("#output").show();
+    
+    
     var firstOperation = $("#first").val();
+    
     var emptyArr = [];
     emptyArr.push(firstOperation)
     var one = "1";
@@ -139,15 +144,6 @@ $("#a1").on("click", function() {
       product = multiplied
     }
 
-    if (sumTwo == 0) {
-      $("#answer").html("Your answer would result in the following quadratic expression: x<sup>2</sup> " + product)
-    }
-    else {
-
-    $("#answer").html("Your answer would result in the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>");
-    }
-
-    $("#finalCheck").show();
     var firstChoicePos = Math.abs(firstChoice)
     var secondChoicePos = Math.abs(secondChoice)
     if (firstChoice > 0) {
@@ -164,8 +160,20 @@ $("#a1").on("click", function() {
       var secondChoiceFinal = " - " + secondChoicePos;
     }
 
+    if (sumTwo == 0) {
+      $("#answer").html("Your answer of  (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") would FOIL back to the following quadratic expression: x<sup>2</sup> " + product + ". Is that what you started with?");
+      
+    }
+    else {
 
-    $("#finalCheck").html("So, does your answer of (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") give you back exactly the expression you started with: <mark>" + a1Array[randomIndex] + "</mark>?"); 
+    $("#answer").html("Your answer of  (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>.  Is that what you started with?");
+    }
+
+    // $("#finalCheck").show();
+    
+
+
+    // $("#finalCheck").html("So, does your answer of (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") give you back exactly the expression you started with: <mark>" + a1Array[randomIndex] + "</mark>?"); 
   })
 })
 

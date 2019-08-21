@@ -149,9 +149,14 @@ h1 {
   height: 100%; 
   
 }
-
+#guess-form{
+  font-size: 25px;
+}
 input { 
   text-align: center; 
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
 }
 
 mark{
