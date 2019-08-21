@@ -221,7 +221,7 @@ padding: 10px;
   transform: translateY(4px);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 667px) {
  input {
     border-radius: 0px;
     width: 50px;
