@@ -251,7 +251,7 @@ padding: 10px;
 }
 
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 767px) {
   #firstAns,#secondAns,#thirdAns,#fourthAns,#fifthAns,#sixthAns {
     font-size: 15px;
   }
@@ -264,7 +264,7 @@ padding: 10px;
     font-size: 10px;
   }
   #widthControl{
-    width: 350px;
+    width: 100%;
   }
   .zooming {
     font-size: 10px;
@@ -273,5 +273,14 @@ padding: 10px;
   #choseTwo, #multToA, #multipliedTwo, #sumTwo {
     font-size: 10px;
   }
+  #answer{
+    font-size: 12px;
+  }
 
+}
+
+@media screen and (max-width: 992px) {
+  #answer {
+    font-size: 18px;
+  }
 }
