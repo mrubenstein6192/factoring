@@ -127,7 +127,7 @@ $("#a1").on("click", function() {
         sumTwo = " - "
       }
       else {
-      sumTwo = sum
+      sumTwo = " - " + Math.abs(sum)
     }
   }
   else {
@@ -161,12 +161,12 @@ $("#a1").on("click", function() {
     }
 
     if (sumTwo == 0) {
-      $("#answer").html("Your answer of  (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") would FOIL back to the following quadratic expression: x<sup>2</sup> " + product + ". Is that what you started with?");
+      $("#answer").html("Your answer of <mark>(x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + " - " + Math.abs(product) + "</mark>. <br>Is that what you started with?");
       
     }
     else {
 
-    $("#answer").html("Your answer of  (x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ") would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>.  Is that what you started with?");
+    $("#answer").html("Your answer of  <mark>(x " + firstChoiceFinal + ")(x " + secondChoiceFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>x<sup>2</sup> " + sumTwo + "x " + product + "</mark>.  <br>Is that what you started with?");
     }
 
     // $("#finalCheck").show();
