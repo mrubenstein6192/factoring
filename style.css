@@ -249,3 +249,26 @@ padding: 10px;
     
   }
 }
+
+
+@media screen and (max-width: 667px) {
+  #firstAns,#secondAns,#thirdAns,#fourthAns,#fifthAns,#sixthAns {
+    font-size: 15px;
+  }
+  input {
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+  }
+  #promptTwo {
+    font-size: 10px;
+  }
+  #widthControl{
+    width: 350px;
+  }
+
+  #choseTwo, #multToA, #multipliedTwo, #sumTwo {
+    font-size: 10px;
+  }
+
+}
