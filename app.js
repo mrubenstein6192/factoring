@@ -192,13 +192,13 @@ $("#aNot1").on("click", function() {
   $("#firstAns").focus();
  
 // just the focus function
-  $(document).ready(function(){
-    $('input').keyup(function(){
-        if(this.value.length==$(this).attr("maxlength")){
-            $(this).next().focus();
-        }
-    });
-    });
+  // $(document).ready(function(){
+  //   $('input').keyup(function(){
+  //       if(this.value.length==$(this).attr("maxlength")){
+  //           $(this).next().focus();
+  //       }
+  //   });
+  //   });
 
 
     $("#enterAnswerTwo").on("click", function(event) {
@@ -250,6 +250,68 @@ $("#aNot1").on("click", function() {
 
        var multToA = firNum * thirdNum
        $("#multToA").html("First Number: " + firNum + "<br>Third Number: " + thirdNum + "<br>a = " + firNum + " x " + thirdNum + " = " + multToA)
+
+       var multToC = secChoice * fourthChoice;
+       $("#multipliedTwo").html("Second Number: " + secChoice + "<br>Fourth Number: " + fourthChoice + "<br>c = " + secChoiceString + " x " + fourthChoiceString + " = " + multToC);
+
+       if (multToC < 0) {
+         var multToCFinal = " - " + Math.abs(multToC)
+       }
+       else {
+         var multToCFinal = " + " + multToC
+       }
+
+       var sumToB = (firNum * fourthChoice) + (secChoice * thirdNum);
+       if (sumToB < 0) {
+         var sumToBFinal = " - " + Math.abs(sumToB)
+       }
+       else {
+         var sumToBFinal = " + " + sumToB;
+       }
+       var firstxfourth = firNum * fourthChoice;
+       if (firstxfourth < 0) {
+         firstxfourthStr = "(" + firstxfourth + ")"
+       }
+       else {
+         firstxfourthStr = firstxfourth
+       }
+       var secxthird = secChoice * thirdNum;
+       if (secxthird < 0) {
+         secxthirdStr = "(" + secxthird + ")"
+       }
+       else {
+         secxthirdStr = secxthird;
+       }
+       $("#sumTwo").html("b = (First)*(Fourth) + (Second)(Third)<br>(" + firNum + " x " + fourthChoiceString + ") + (" + secChoiceString + " x " + thirdNum + ") = <br>" + firstxfourthStr + " + " + secxthirdStr + " = " + sumToB);
+
+       if (firNum == 1) {
+         var firNumFinal = ""
+       }
+       else {
+         var firNumFinal = firNum
+       }
+       if (thirdNum == 1) {
+         var thirdNumFinal = "";
+       }
+       else {
+         var thirdNumFinal = thirdNum
+       }
+       if (secChoice > 0) {
+        var secondChoiceFinal = " + " + secChoice
+       }
+       else {
+         var secondChoiceFinal = " - " + Math.abs(secChoice);
+       }
+
+       if (fourthChoice > 0) {
+        var fourthNumFinal = " + " + fourthChoice
+       }
+       else {
+         var fourthNumFinal = " - " + Math.abs(fourthChoice);
+       }
+
+       $("#answer").html("Your answer of <mark>(" + firNumFinal + "x " + secondChoiceFinal + ")(" + thirdNumFinal + "x " + fourthNumFinal + ")</mark> would FOIL back to the following quadratic expression: <mark>"+multToA+"x<sup>2</sup> " + sumToBFinal + "x " + multToCFinal + "</mark>. <br>Is that what you started with?")
+       $("#question").html("<mark>" + secondArray[ranInd] + "</mark>")
     })
 
 //end of aNot1 section
