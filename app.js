@@ -35,10 +35,9 @@ var a1Array = [
 "x<sup>2</sup> - 25",
 "x<sup>2</sup> - 7x + 12",
 "x<sup>2</sup> + 2x - 3",
-"x<sup>2</sup> - 15x - 34",
 "x<sup>2</sup> + x - 30"
 ];
-var randomIndex = Math.floor(Math.random() * 16) + 1;
+
 
 var secondArray = [
 "2x<sup>2</sup> - 3x - 2",
@@ -55,12 +54,14 @@ var secondArray = [
 "6x<sup>2</sup> - x - 5",
 "7x<sup>2</sup> - 5x - 2"
 ];
-var ranInd = Math.floor(Math.random()* 12) + 1;
+
 
 // on-clicks for which to appear
 $("#a1").on("click", function() {
+  var randomIndex = Math.floor(Math.random() * 15) + 1;
   $("#buttonChoices").hide();
   console.log(randomIndex)
+  $("#question").show()
   $("#question").html(a1Array[randomIndex]);
   $("#prompt").show();
   $("#guesses").show();
@@ -77,7 +78,11 @@ $("#a1").on("click", function() {
 
   $("#enterAnswer").on("click", function(event) {
     event.preventDefault();
+    $("#chose").show();
+    $("#multiplied").show();
+    $("#sum").show();
     $("#output").show();
+    $("#answer").show();
     $("#finalCheck").show()
     
     var firstOperation = $("#first").val();
@@ -179,8 +184,22 @@ $("#a1").on("click", function() {
     //correct button
     $("#clickMeTwo").on("click", function() {
       window.scrollTo(0, 0);
-      location.reload();
-      start();
+      $("#buttonChoices").show();
+      $("#question").val("");
+      $("#question").hide();
+      $("#guesses").hide();
+      $("#first").val("");
+      $("#second").val("");
+      $("#third").val("");
+      $("#fourth").val("");
+      $("#first").focus();
+      $("#chose").html("").hide();
+      $("#multiplied").html("").hide();
+      $("#sum").html("").hide();
+      $("#output").hide();
+      $("#answer").html("").hide();
+      $("#finalCheck").hide();
+      
     })
     //incorrect button
     $("#notReady").on("click", function() {
@@ -194,10 +213,12 @@ $("#a1").on("click", function() {
 })
 
 $("#aNot1").on("click", function() {
+  var ranInd = Math.floor(Math.random()* 12) + 1;
+  $("#prompt").hide();
   $("#promptTwo").show();
- $("#question").html(secondArray[ranInd]);
- $("#buttonChoices").hide();
- $("#guessesTwo").show();
+  $("#question").html(secondArray[ranInd]);
+  $("#buttonChoices").hide();
+  $("#guessesTwo").show();
   $("#firstAns").focus();
  
 
