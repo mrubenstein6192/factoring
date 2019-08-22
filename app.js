@@ -68,13 +68,13 @@ $("#a1").on("click", function() {
   $("#first").focus();
   
   // autofocus for each input
-    $(document).ready(function(){
-    $('input').keyup(function(){
-        if(this.value.length==$(this).attr("maxlength")){
-            $(this).next().focus();
-        }
-    });
-    });
+    // $(document).ready(function(){
+    // $('input').keyup(function(){
+    //     if(this.value.length==$(this).attr("maxlength")){
+    //         $(this).next().focus();
+    //     }
+    // });
+    // });
 
   $("#enterAnswer").on("click", function(event) {
     event.preventDefault();
@@ -184,6 +184,7 @@ $("#a1").on("click", function() {
     //correct button
     $("#clickMeTwo").on("click", function() {
       window.scrollTo(0, 0);
+      $("#prompt").hide();
       $("#buttonChoices").show();
       $("#question").val("");
       $("#question").hide();
@@ -214,8 +215,10 @@ $("#a1").on("click", function() {
 
 $("#aNot1").on("click", function() {
   var ranInd = Math.floor(Math.random()* 12) + 1;
+  console.log(ranInd);
   $("#prompt").hide();
   $("#promptTwo").show();
+  $("#question").show();
   $("#question").html(secondArray[ranInd]);
   $("#buttonChoices").hide();
   $("#guessesTwo").show();
@@ -225,6 +228,13 @@ $("#aNot1").on("click", function() {
     $("#enterAnswerTwo").on("click", function(event) {
       event.preventDefault();
        $("#outputTwo").show();
+       $("#finalCheck").show();
+       $("#choseTwo").show();
+       $("#multToA").show();
+       $("#multipliedTwo").show();
+       $("#sumTwo").show();
+       $(".zooming").show();
+       $("#answer").show();
        $("#finalCheck").show();
 
        var firNum = $("#firstAns").val();
@@ -284,11 +294,21 @@ $("#aNot1").on("click", function() {
 
        var sumToB = (firNum * fourthChoice) + (secChoice * thirdNum);
        if (sumToB < 0) {
+         if (sumToB == -1) {
+           sumToBFinal = " - "
+         }
+         else {
          var sumToBFinal = " - " + Math.abs(sumToB)
        }
+      }
        else {
+         if (sumToB == 1) {
+           sumToBFinal = " + "
+         }
+         else {
          var sumToBFinal = " + " + sumToB;
        }
+      }
        var firstxfourth = firNum * fourthChoice;
        if (firstxfourth < 0) {
          firstxfourthStr = "(" + firstxfourth + ")"
@@ -336,8 +356,25 @@ $("#aNot1").on("click", function() {
 
        $("#clickMeTwo").on("click", function() {
         window.scrollTo(0, 0);
-        location.reload();
-        start();
+        $("#promptTwo").hide();
+        $("#buttonChoices").show();
+        $("#question").hide();
+        $("#guessesTwo").hide();
+        $("#firstAns").val("");
+        $("#secondAns").val("");
+        $("#thirdAns").val("");
+        $("#fourthAns").val("");
+        $("#fifthAns").val("");
+        $("#sixthAns").val("");
+        $("#first").focus();
+        $(".zooming").hide();
+        $("#choseTwo").html("").hide()
+        $("#multToA").html("").hide()
+        $("#multipliedTwo").html("").hide()
+        $("#sumTwo").html("").hide();
+        $("#output").hide();
+        $("#answer").hide()
+        $("#finalCheck").hide();
       })
       $("#notReady").on("click", function() {
         $("#firstAns").val("");
